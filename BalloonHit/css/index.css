@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    background-color: #434343;
+}
+.balloon{
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    background-color: #faf9f9;
+    border-radius: 160px 160px 64px 160px;  /*变圆 左上 右上 左下 右下*/
+    transform: rotate(45deg);   /*顺时针旋转45度*/
+    box-shadow: -8px -8px 80px pink inset, 48px 48px 24px rgba(220,150,150,0.2); /*阴影*/
+}
+.balloon::after{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 8px solid #dbbdbd;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
+    border-radius: 16px;
+    content: '';
+}
